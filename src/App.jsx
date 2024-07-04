@@ -1,12 +1,24 @@
-import { DemonstratingProps } from "./components/demo/DemonstratingProps";
+import React from "react";
+import GenerateTiles from "./game";
+import Cards from "./cards";
 
-function App() {
-    return (
-        <div>
-            <h1>App component</h1>
-            <DemonstratingProps />
-        </div>
-    );
+export default function App() {
+  const [displayGames, setDisplayGames] = React.useState(Cards);
+
+  const gameDisplay = displayGames.map((displayGame) => (
+    <GenerateTiles
+      className="box"
+      key={displayGame.id}
+      on={displayGame.on}
+      word={displayGame.word}
+      emoji={displayGame.emoji}
+    />
+  ));
+
+  return (
+    <div>
+      <h1>Animals Tile Flip Game</h1>
+      <main>{gameDisplay}</main>
+    </div>
+  );
 }
-
-export default App;

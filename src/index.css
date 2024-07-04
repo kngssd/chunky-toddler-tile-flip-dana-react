@@ -1,18 +1,47 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    line-height: 1.5;
-    max-width: 1000px;
-    margin: 0 auto;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
+}
+
+.tile-style {
+  width: 8rem;
+  height: 8rem;
+  display: inline-block;
+  font-size: 24px;
+  align-content: center;
+  align-items: center;
+}
+
+.word-style {
+  text-align: center;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(5, 53, 37);
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 2px;
+  background-color: bisque;
+  text-align: center;
 }
